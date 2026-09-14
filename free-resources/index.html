@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Access Learning | Your Brand Name</title>
+    <meta name="description" content="Live learning sessions and structured learning resources for professional German development.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/styles.css">
+    <!-- Adjust path if needed -->
+    <style>
+        /* ======================== */
+        /* ACCORDION & MOBILE STYLING */
+        /* ======================== */
+
+        .accordion-item {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            margin-bottom: 1rem;
+        }
+
+        .accordion-header {
+            width: 100%;
+            text-align: left;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border: none;
+            background: #f7f7f7;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s ease;
+        }
+
+        .accordion-header:hover {
+            background: #eaeaea;
+        }
+
+        .accordion-arrow {
+            display: inline-block;
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active .accordion-arrow {
+            transform: rotate(90deg);
+        }
+
+        .accordion-content {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .resource-entry {
+            margin-bottom: 1rem;
+        }
+
+        .resource-entry h3 {
+            margin-bottom: 0.3rem;
+        }
+
+        .resource-entry p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .accordion-header {
+                font-size: 1rem;
+                padding: 0.9rem 1.2rem;
+            }
+            .accordion-arrow {
+                margin-left: 0.3rem;
+            }
+            .resource-entry h3 {
+                font-size: 1rem;
+            }
+            .resource-entry p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .accordion-header,
+            .accordion-content {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="page-header">
+    <div class="container">
+        <h1>Open Access Learning</h1>
+        <p class="subtitle">
+            Curated webinars and professional reference materials designed to support
+            structured, measurable progress in German for professional contexts.
+        </p>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="resource-section">
+
+        <div class="accordion">
+
+            <!-- ============================= -->
+            <!-- LIVE LEARNING SESSIONS -->
+            <!-- ============================= -->
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Live Learning Sessions
+                    <span class="accordion-arrow">&#9656;</span>
+                </button>
+
+                <div class="accordion-content">
+
+                    <div class="resource-entry">
+                        <h3>Project Management in German – Where to Start</h3>
+                        <p><strong>Date:</strong> 12 March 2026</p>
+                        <p>
+                            Practical introduction to terminology and communication
+                            patterns for professional project environments.
+                        </p>
+                        <a href="https://eventbrite-link-1.com"
+                           target="_blank"
+                           class="btn-primary">
+                            Register
+                        </a>
+                    </div>
+
+                    <div class="resource-entry">
+                        <h3>German for Medical Professionals – First Steps</h3>
+                        <p><strong>Date:</strong> 13 March 2026</p>
+                        <p>
+                            Essential vocabulary and communication strategies
+                            for healthcare settings.
+                        </p>
+                        <a href="https://eventbrite-link-2.com"
+                           target="_blank"
+                           class="btn-primary">
+                            Register
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ============================= -->
+            <!-- STRUCTURED LEARNING RESOURCES -->
+            <!-- ============================= -->
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Structured Learning Resources
+                    <span class="accordion-arrow">&#9656;</span>
+                </button>
+
+                <div class="accordion-content">
+
+                    <div class="resource-entry">
+                        <h3>German for PMs – Essential Phrases by Level</h3>
+                        <p>
+                            Structured phrase collection from A1–C1 for
+                            professional project communication.
+                        </p>
+                        <a href="/free-resources/guides/german-for-pms-guide.pdf"
+                           target="_blank"
+                           class="btn-secondary">
+                            Download PDF
+                        </a>
+                    </div>
+
+                    <div class="resource-entry">
+                        <h3>Professional Email Structures in German</h3>
+                        <p>
+                            Clear models and ready-to-use structures
+                            for formal and semi-formal communication.
+                        </p>
+                        <a href="/free-resources/guides/email-guide.pdf"
+                           target="_blank"
+                           class="btn-secondary">
+                            Download PDF
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- ============================= -->
+<!-- LINK TO DEDICATED JS -->
+<!-- ============================= -->
+<script src="/js/free-resources.js"></script>
+
+</body>
+</html>

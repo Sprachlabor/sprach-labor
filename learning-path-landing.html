@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Path – Sprachlabor</title>
+  <meta name="description" content="Übersicht Kursstruktur">
+ <link rel="stylesheet" href="../css/styles.css"> 
+</head>
+
+<body>
+<section id="learning-path-landing">
+  <h2>Ihr Lernweg im Überblick</h2>
+  <p>Klicken Sie auf Ihr Level, um die passenden Kurse in unserem Angebot zu entdecken.</p>
+
+  <div class="levels-container">
+
+    <!-- A1 -->
+    <div class="level-card core" onclick="location.href='/angebote#a1'">
+      <div class="level-icon">A1</div>
+      <h3>A1 – Anfänger</h3>
+      <p class="tooltip">Grundlagen & Alltagssituationen meistern
+        <span class="tooltiptext">Optionen: Schnellkurs „Schritte“ & Strukturierter Kurs „Deutsch mit Struktur“</span>
+      </p>
+      <div class="icons">
+        <span class="icon conv" title="Conversation Lab">&#128483;</span>
+      </div>
+    </div>
+
+    <div class="arrow">&#8594;</div>
+
+    <!-- A2 -->
+    <div class="level-card core" onclick="location.href='/angebote#a2'">
+      <div class="level-icon">A2</div>
+      <h3>A2 – Elementar</h3>
+      <p class="tooltip">Routinen, Familie, Hobbys & Hörverstehen
+        <span class="tooltiptext">Optionen: Schnellkurs „Schritte“ & Kurs „Deutsch mit Struktur“</span>
+      </p>
+      <div class="icons">
+        <span class="icon conv" title="Conversation Lab">&#128483;</span>
+      </div>
+    </div>
+
+    <div class="arrow">&#8594;</div>
+
+    <!-- B1 -->
+    <div class="level-card core" onclick="location.href='/angebote#b1'">
+      <div class="level-icon">B1</div>
+      <h3>B1 – Mittelstufe</h3>
+      <p class="tooltip">Meinungen äußern, Schreiben & Lesen auf mittlerem Niveau
+        <span class="tooltiptext">Optionen: Schnellkurs „Schritte“ & Kurs „Deutsch mit Struktur“</span>
+      </p>
+      <div class="icons">
+        <span class="icon conv" title="Conversation Lab">&#128483;</span>
+      </div>
+    </div>
+
+    <div class="arrow">&#8594;</div>
+
+    <!-- B2 -->
+    <div class="level-card professional" onclick="location.href='/angebote#b2'">
+      <div class="level-icon">B2</div>
+      <h3>B2 – Oberstufe</h3>
+      <p class="tooltip">Beruflich sicher kommunizieren, E-Mails & Meetings
+        <span class="tooltiptext">Optionen: Schnellkurs „Schritte“ & Kurs „Deutsch mit Struktur“</span>
+      </p>
+      <div class="icons">
+        <span class="icon prof" title="Professional Track">&#128188;</span>
+        <span class="icon conv" title="Conversation Lab">&#128483;</span>
+      </div>
+    </div>
+
+    <div class="arrow">&#8594;</div>
+
+    <!-- C1 -->
+    <div class="level-card professional" onclick="location.href='/angebote#c1'">
+      <div class="level-icon">C1</div>
+      <h3>C1 – Fortgeschritten / Experten</h3>
+      <p class="tooltip">Flüssig, nuanciert & professionell ausdrücken
+        <span class="tooltiptext">Optionen: Schnellkurs „Schritte“ & Kurs „Deutsch mit Struktur“</span>
+      </p>
+      <div class="icons">
+        <span class="icon prof" title="Professional Track">&#128188;</span>
+        <span class="icon conv" title="Conversation Lab">&#128483;</span>
+        <span class="icon exam" title="Exam Prep">&#127891;</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* Container */
+#learning-path-landing {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  text-align: center;
+  font-family: sans-serif;
+  background: linear-gradient(120deg, #e0e7ff 0%, #ffffff 100%);
+  border-radius: 12px;
+}
+
+#learning-path-landing h2 {
+  color: #1F3A93;
+  margin-bottom: 0.5rem;
+}
+
+#learning-path-landing p {
+  margin-bottom: 2.5rem;
+  color: #555;
+}
+
+/* Levels container */
+.levels-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 2rem; /* space for first & last cards */
+  box-sizing: border-box;
+  scroll-padding-left: 2rem;
+}
+
+/* Level Cards */
+.level-card {
+  background: linear-gradient(145deg, #f5f7fa, #e6ebf9);
+  border-radius: 12px;
+  border-left: 6px solid #1F3A93;
+  padding: 1.5rem 1.2rem;
+  width: 180px;
+  min-width: 150px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  flex: 0 0 auto; /* prevent shrinking */
+  position: relative;
+}
+
+.level-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.level-card h3 {
+  color: #1F3A93;
+  margin: 0.5rem 0;
+}
+
+.level-card p {
+  color: #555;
+  font-size: 0.85rem;
+  position: relative;
+}
+
+/* Tooltip */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: #1F3A93;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%; 
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.75rem;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Level icons */
+.level-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 0.8rem auto;
+  background-color: #1F3A93;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* Icons for types */
+.icons {
+  margin-top: 0.5rem;
+}
+.icon {
+  font-size: 1.1rem;
+  margin: 0 3px;
+}
+
+/* Professional track accent */
+.level-card.professional {
+  border-left: 6px solid #f39c12;
+  background: linear-gradient(145deg, #fff4e6, #fef8f0);
+}
+
+/* Arrows */
+.arrow {
+  font-size: 2rem;
+  color: #888;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+/* Hide scrollbar for horizontal scroll */
+.levels-container::-webkit-scrollbar { display: none; }
+.levels-container { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .levels-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  .arrow { display: none; }
+  .level-card { width: 80%; }
+}
+</style>
+
+
+
+    </body>
+    </html>

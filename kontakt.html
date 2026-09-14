@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kontakt – Sprachlabor</title>
+  <meta name="description"
+        content="Kontaktieren Sie gern das Sprachlabor – für Fragen zu Deutschkursen, 1:1 Unterricht, Workshops und weiteren Angeboten.">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/theme.css">
+
+  <link rel="icon"
+        type="image/png"
+        href="assets/images/SL Logo rund ohne BG 16px.png">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+
+   <a href="index.html" class="logo">
+  <img
+    src="assets/images/Thanks to Robert for a wonderful Logo.png"
+    alt="Logo designed by Robert"
+    class="learner-logo"
+  >
+  <span>Sprachlabor</span>
+</a>
+
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html" class="nav-link">Start</a></li>
+        <li><a href="lernen.html" class="nav-link">Lernen</a></li>
+        <li><a href="angebote.html" class="nav-link">Angebote</a></li>
+        <li><a href="ressourcen.html" class="nav-link">Ressourcen</a></li>
+        <li><a href="kontakt.html" class="nav-link active">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="page-hero">
+    <div class="container">
+
+      <p class="eyebrow">Kontakt</p>
+
+      <h2>Sie möchten mehr erfahren?</h2>
+
+      <p>
+        Sie haben eine Frage zu einem Kurs, suchen individuellen
+        Deutschunterricht oder möchten mehr über ein Angebot erfahren?
+        Schreiben Sie mir gerne.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT FORM -->
+
+  <section class="section-intro">
+    <div class="content-narrow">
+
+      <div class="section-heading">
+        <p class="section-label">Ihre Nachricht</p>
+
+        <h2>Schreiben Sie mir</h2>
+
+        <p class="lead">
+          Beschreiben Sie kurz, wobei ich Sie unterstützen kann.
+          Ich melde mich in der Regel innerhalb von 24 Stunden.
+        </p>
+      </div>
+
+
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="contact-form"
+      >
+
+        <!-- Web3Forms -->
+        <input
+          type="hidden"
+          name="access_key"
+           value="2f5dbb05-6178-448d-af3e-2c2fdb632097"
+        >
+
+        <input
+          type="hidden"
+          name="subject"
+          value="Neue Anfrage über die Sprachlabor-Website"
+        >
+
+        <input
+          type="hidden"
+          name="from_name"
+          value="Sprachlabor Website"
+        >
+
+        <input
+          type="hidden"
+          name="redirect"
+          value="https://sprach-labor.com/thank-you.html"
+        >
+
+
+        <label for="name">
+          Name
+          <input
+            type="text"
+            id="name"
+            name="name"
+            autocomplete="name"
+            required
+          >
+        </label>
+
+
+        <label for="email">
+          E-Mail
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+          >
+        </label>
+
+
+        <label for="message">
+          Nachricht
+          <textarea
+            id="message"
+            name="message"
+            rows="7"
+            required
+          ></textarea>
+        </label>
+
+
+        <label class="gdpr">
+          <input
+            type="checkbox"
+            name="consent"
+            value="yes"
+            required
+          >
+
+          <span>
+            Ich stimme der Verarbeitung meiner personenbezogenen Daten
+            gemäß der
+            <a href="datenschutz.html" target="_blank">
+              Datenschutzerklärung
+            </a>
+            zu.
+          </span>
+        </label>
+
+
+        <button type="submit" class="button button-primary">
+          Nachricht senden
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- SMALL CLOSING NOTE -->
+
+  <section class="section-alt">
+    <div class="content-narrow content-centred">
+
+      <p class="section-label">Noch unsicher?</p>
+
+      <h2>Sie müssen noch nicht genau wissen, was Sie brauchen.</h2>
+
+      <p class="lead">
+        Wenn Sie Ihr Deutsch gezielt weiterentwickeln möchten, können wir
+        gemeinsam herausfinden, welches Format zu Ihnen und Ihren Zielen passt.
+      </p>
+
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+  <p>&copy; 2026 Sprachlabor</p>
+</footer>
+
+</body>
+</html>

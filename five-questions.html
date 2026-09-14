@@ -1,0 +1,929 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Five Diagnostic Questions | Sprachlabor</title>
+
+  <meta
+    name="description"
+    content="The Five Diagnostic Questions: a practical framework for evaluating and designing presentations that do more than deliver information."
+  >
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/SL Logo rund ohne BG 16px.png">
+
+  <style>
+    :root {
+      --navy: #0b1f33;
+      --navy-light: #132f49;
+      --blue: #1d5d8f;
+      --accent: #7fb7d9;
+      --cream: #f5f3ee;
+      --white: #ffffff;
+      --text: #17212b;
+      --muted: #5d6872;
+      --border: #d9dee3;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      padding: 90px 0 80px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      line-height: 1.05;
+      max-width: 850px;
+      margin-bottom: 28px;
+      font-weight: 700;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-intro {
+      font-size: 1.25rem;
+      max-width: 720px;
+      color: #e5edf3;
+      margin-bottom: 35px;
+    }
+
+    .hero-note {
+      display: inline-block;
+      border-left: 3px solid var(--accent);
+      padding-left: 18px;
+      color: #c9d8e4;
+      max-width: 650px;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 75px 0;
+      background: var(--white);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .section-label {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .intro h2 {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: var(--navy);
+    }
+
+    .intro p {
+      margin-bottom: 18px;
+      color: #3f4a54;
+    }
+
+    .principles {
+      border-top: 1px solid var(--border);
+      padding-top: 25px;
+    }
+
+    .principles li {
+      list-style: none;
+      margin-bottom: 14px;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .principles li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: bold;
+    }
+
+    /* WHO IS IT FOR */
+
+    .who {
+      padding: 75px 0;
+      background: var(--cream);
+    }
+
+    .who h2 {
+      font-size: 2.2rem;
+      color: var(--navy);
+      margin-bottom: 20px;
+      line-height: 1.2;
+      max-width: 850px;
+    }
+
+    .who p {
+      margin-bottom: 18px;
+      color: #3f4a54;
+      max-width: 850px;
+    }
+
+    .who ul {
+      list-style: none;
+      margin: 20px 0 0;
+    }
+
+    .who li {
+      padding-left: 24px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .who li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: bold;
+    }
+
+    /* QUESTIONS */
+
+    .workshops {
+      padding: 85px 0;
+      background: var(--white);
+    }
+
+    .workshops-header {
+      max-width: 720px;
+      margin-bottom: 50px;
+    }
+
+    .workshops-header h2 {
+      font-size: 2.6rem;
+      color: var(--navy);
+      margin-bottom: 15px;
+      line-height: 1.15;
+    }
+
+    .workshops-header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .workshop {
+      background: var(--cream);
+      margin-bottom: 25px;
+      padding: 38px 42px;
+      border-left: 5px solid var(--blue);
+      box-shadow: 0 8px 25px rgba(11, 31, 51, 0.06);
+    }
+
+    .workshop-number {
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+    }
+
+    .workshop h3 {
+      color: var(--navy);
+      font-size: 1.65rem;
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    .workshop-description {
+      color: var(--muted);
+      margin-bottom: 25px;
+      max-width: 750px;
+      font-size: 1.05rem;
+    }
+
+    .learn {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--blue);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .workshop ul {
+      list-style: none;
+      display: grid;
+      gap: 9px;
+    }
+
+    .workshop li {
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .workshop li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: bold;
+    }
+
+    /* FORMAT */
+
+    .format {
+      background: var(--navy);
+      color: var(--white);
+      padding: 75px 0;
+    }
+
+    .format-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .format h2 {
+      font-size: 2.3rem;
+      margin-bottom: 40px;
+    }
+
+    .format-card {
+      border-top: 2px solid var(--accent);
+      padding-top: 20px;
+    }
+
+    .format-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+
+    .format-card p {
+      color: #c9d8e4;
+    }
+
+    /* CTA */
+
+    .cta {
+      padding: 85px 0;
+      background: var(--white);
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 2.7rem;
+      color: var(--navy);
+      margin-bottom: 18px;
+      line-height: 1.15;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      text-decoration: none;
+      padding: 15px 28px;
+      font-weight: 700;
+      transition: background 0.2s ease;
+      border-radius: 4px;
+    }
+
+    .cta-button:hover {
+      background: var(--blue);
+    }
+
+    .details {
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* FOOTER */
+
+    footer.site-footer {
+      background: #071725;
+      color: #aebdca;
+      padding: 30px 0;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 750px) {
+
+      .intro-grid,
+      .format-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .workshop {
+        padding: 28px 25px;
+      }
+
+      .workshops-header h2,
+      .cta h2,
+      .who h2 {
+        font-size: 2.1rem;
+      }
+    }
+/* Interest-Formular */
+.interest-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 500px;
+  margin: 30px auto 0;
+  text-align: left;
+}
+
+.interest-form label {
+  display: block;
+  font-weight: 500;
+  color: var(--navy);
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.interest-form input[type="text"],
+.interest-form input[type="email"] {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--white);
+  box-sizing: border-box;
+}
+
+.interest-form input[type="text"]:focus,
+.interest-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(29, 93, 143, 0.1);
+}
+
+.interest-form .consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.interest-form .consent-label input[type="checkbox"] {
+  margin-top: 4px;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.interest-form .cta-button {
+  align-self: flex-start;
+  background: var(--navy);
+  color: var(--white);
+  padding: 14px 28px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 10px;
+}
+
+.interest-form .cta-button:hover {
+  background: var(--blue);
+}
+  </style>
+  
+</head>
+
+
+<body>
+
+
+<!-- HERO -->
+
+<header class="hero">
+  <div class="container">
+
+    <div class="eyebrow">
+      Sprachlabor · The Five Diagnostic Questions
+    </div>
+
+    <h1>
+      How do you know<br>
+      <span>a speech has changed you?</span>
+    </h1>
+
+    <p class="hero-intro">
+      Five diagnostic questions for professionals who want to evaluate —
+      and design — presentations that make a difference.
+    </p>
+
+    <div class="hero-note">
+      Not another “communication tips” webinar.<br>
+      A framework for thinking.
+    </div>
+
+  </div>
+</header>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+  <div class="container">
+
+    <div class="intro-grid">
+
+      <div>
+
+        <div class="section-label">
+          Why these questions?
+        </div>
+
+        <h2>
+          Most presentations inform.
+          Very few change how we see, think, or act.
+        </h2>
+
+        <p>
+          We've all sat through talks that were informative, polished —
+          and forgotten by the time we reached the exit.
+        </p>
+
+        <p>
+          The Five Diagnostic Questions are a way of looking more closely
+          at what makes communication genuinely valuable.
+        </p>
+
+        <p>
+          And they aren't just for evaluating other people's presentations.
+          Use them to question, shape, and strengthen your own talks,
+          pitches, and presentations.
+        </p>
+
+      </div>
+
+
+      <div class="principles">
+
+        <div class="section-label">
+          The approach
+        </div>
+
+        <ul>
+          <li>A framework, not a checklist</li>
+          <li>For speakers, leaders, and professionals</li>
+          <li>Practical, precise, and immediately applicable</li>
+          <li>Built on structure — not on charisma</li>
+          <li>Designed to strengthen judgement, not just delivery</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- WHO IS IT FOR -->
+
+<section class="who">
+  <div class="container">
+
+    <div class="section-label">
+      Who is this for?
+    </div>
+
+    <h2>
+      Professionals who don't just want to be heard —
+      but want to add value.
+    </h2>
+
+    <p>
+      This is for you if you:
+    </p>
+
+    <ul>
+      <li>present in meetings, conferences, or pitches</li>
+      <li>write speeches, talks, or keynotes</li>
+      <li>want to move beyond “informative” to genuinely valuable</li>
+      <li>want a sharper way to evaluate the communication you encounter</li>
+      <li>value structure, clarity, and intellectual honesty</li>
+    </ul>
+
+  </div>
+</section>
+
+
+<!-- THE FIVE QUESTIONS -->
+
+<section class="workshops">
+  <div class="container">
+
+    <div class="workshops-header">
+
+      <div class="section-label">
+        The five questions
+      </div>
+
+      <h2>
+        Five questions.<br>
+        One framework.
+      </h2>
+
+      <p>
+        Each question opens a different dimension of what makes
+        professional communication work — and gives you a different
+        way of looking at a speech, presentation, or pitch.
+      </p>
+
+    </div>
+
+
+    <!-- QUESTION 01 -->
+
+    <article class="workshop">
+
+      <div class="workshop-number">
+        Question 01
+      </div>
+
+      <h3>
+        The Reframe
+      </h3>
+
+      <p class="workshop-description">
+        Does this show me a familiar problem in an unfamiliar way?
+      </p>
+
+      <div class="learn">
+        The diagnostic signal
+      </div>
+
+      <ul>
+        <li>A shift in perspective, not just new information</li>
+        <li>The moment you see something old with new eyes</li>
+      </ul>
+
+    </article>
+
+
+    <!-- QUESTION 02 -->
+
+    <article class="workshop">
+
+      <div class="workshop-number">
+        Question 02
+      </div>
+
+      <h3>
+        The Lens
+      </h3>
+
+      <p class="workshop-description">
+        Is expertise serving the argument — or just on display?
+      </p>
+
+      <div class="learn">
+        The diagnostic signal
+      </div>
+
+      <ul>
+        <li>Knowledge that illuminates, not impresses</li>
+        <li>Authority that supports the idea, not the ego</li>
+      </ul>
+
+    </article>
+
+
+    <!-- QUESTION 03 -->
+
+    <article class="workshop">
+
+      <div class="workshop-number">
+        Question 03
+      </div>
+
+      <h3>
+        The Takeaway
+      </h3>
+
+      <p class="workshop-description">
+        Can I name ONE idea I'm carrying with me?
+      </p>
+
+      <div class="learn">
+        The diagnostic signal
+      </div>
+
+      <ul>
+        <li>A crystallised insight — not a list of points</li>
+        <li>Something you can repeat in a single sentence</li>
+      </ul>
+
+    </article>
+
+
+    <!-- QUESTION 04 -->
+
+    <article class="workshop">
+
+      <div class="workshop-number">
+        Question 04
+      </div>
+
+      <h3>
+        The Invitation
+      </h3>
+
+      <p class="workshop-description">
+        Am I thinking with the speaker — or being told what to think?
+      </p>
+
+      <div class="learn">
+        The diagnostic signal
+      </div>
+
+      <ul>
+        <li>Gaps left for your own judgement</li>
+        <li>The feeling of being respected, not lectured</li>
+      </ul>
+
+    </article>
+
+
+    <!-- QUESTION 05 -->
+
+    <article class="workshop">
+
+      <div class="workshop-number">
+        Question 05
+      </div>
+
+      <h3>
+        The Value Added
+      </h3>
+
+      <p class="workshop-description">
+        Am I different — clearer, more capable — than I was before?
+      </p>
+
+      <div class="learn">
+        The diagnostic signal
+      </div>
+
+      <ul>
+        <li>A genuine shift in how you see, think, or act</li>
+        <li>Transformation, not just information</li>
+      </ul>
+
+    </article>
+
+
+  </div>
+</section>
+
+
+<!-- FORMAT -->
+
+<section class="format">
+
+  <div class="container">
+
+    <div class="section-label">
+      Short. Focused. Practical.
+    </div>
+
+    <h2>
+      What to expect
+    </h2>
+
+    <div class="format-grid">
+
+      <div class="format-card">
+
+        <h3>
+          One framework
+        </h3>
+
+        <p>
+          Five questions — each with a clear diagnostic purpose.
+          Together, they give you a structured way to look at
+          professional communication.
+        </p>
+
+      </div>
+
+
+      <div class="format-card">
+
+        <h3>
+          Real examples
+        </h3>
+
+        <p>
+          Apply the questions to speeches, presentations,
+          pitches, and other forms of professional communication.
+        </p>
+
+      </div>
+
+
+      <div class="format-card">
+
+        <h3>
+          Your own toolkit
+        </h3>
+
+        <p>
+          Leave with a reusable method for evaluating communication
+          and for building your own presentations with intention.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INTEREST CTA -->
+
+
+<section class="cta">
+  <div class="container">
+
+<div class="section-label">
+  Currently in development
+</div>
+
+<h2>
+  Interested?
+</h2>
+
+<p>
+  The Five Diagnostic Questions is currently in development.
+  If the idea sounds useful to you, register your interest
+  and I'll let you know when the first session is scheduled.
+</p>
+
+<form
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  class="interest-form"
+>
+
+  <input
+    type="hidden"
+    name="access_key"
+    value="b366840f-896d-4b4a-8cd4-7db888f38b99"
+  >
+
+  <input
+    type="hidden"
+    name="subject"
+    value="Interest – Five Diagnostic Questions"
+  >
+
+  <input
+    type="hidden"
+    name="from_name"
+    value="Sprachlabor Five Diagnostic Questions"
+  >
+
+  <input
+    type="hidden"
+    name="redirect"
+    value="https://sprach-labor.com/interest-thank-you.html"
+  >
+
+  <label for="name">Name</label>
+  <input
+    type="text"
+    id="name"
+    name="name"
+    required
+    autocomplete="name"
+  >
+
+  <label for="email">Email</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    required
+    autocomplete="email"
+  >
+
+  <label class="consent-label">
+    <input
+      type="checkbox"
+      name="consent"
+      value="yes"
+      required
+    >
+    <span>
+      I agree that Sprachlabor may use my details to contact me
+      about the Five Diagnostic Questions.
+    </span>
+  </label>
+
+  <button type="submit" class="cta-button">
+    Register my interest
+  </button>
+
+</form>
+
+<div class="details">
+  Webinar · 75–90 minutes · max. 6 participants
+  <br>
+  No commitment — registering your interest does not book a place.
+</div>
+```
+
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="site-footer">
+
+  <div class="container">
+    Sprachlabor – Deutsch lernen mit Struktur
+  </div>
+
+</footer>
+
+
+</body>
+</html>

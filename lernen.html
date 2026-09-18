@@ -30,18 +30,31 @@
   <span>Sprachlabor</span>
 </a>
 
-    <nav class="main-nav" aria-label="Hauptnavigation">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="lernen.html" class="active">Über Sprachlabor</a></li>
-          <li><a href="angebote.html">Kurse</a></li>
-          <li><a href="ressourcen.html">Ressourcen</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
+      <!-- Burger-Button -->
+    <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-      </div>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="lernen.html" class="nav-link active">Über Sprachlabor</a></li>
+        <li><a href="angebote.html" class="nav-link">Kurse</a></li>
+        <li><a href="ressourcen.html" class="nav-link">Ressourcen</a></li>
+        <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+      </ul>
     </nav>
-  </header>
+
+    <div class="lang-switch" aria-label="Sprachauswahl">
+      <a href="kontakt.html" class="lang-link active">DE</a>
+      <span class="lang-divider">|</span>
+      <a href="contact.html" class="lang-link">EN</a>
+    </div>
+
+  </div>
+</header>
 
 
   <main>
@@ -318,6 +331,6 @@
 
     </div>
   </footer>
-
+<script src="js/nav-toggle.js" defer></script>
 </body>
 </html>
